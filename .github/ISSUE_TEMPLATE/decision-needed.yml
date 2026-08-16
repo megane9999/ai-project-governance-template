@@ -1,0 +1,49 @@
+name: Decision needed
+description: セッションをまたぐ人間判断を追跡する
+title: "[Decision needed] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        その場で決まる判断にはIssueを作りません。決定後はDECへ結果を保存し、このIssueを閉じます。
+  - type: textarea
+    id: question
+    attributes:
+      label: Decision question
+      description: 誰が何を決める必要があるか
+    validations:
+      required: true
+  - type: input
+    id: canonical
+    attributes:
+      label: Canonical context
+      description: 関連するWRK / RES / EXP / RSKへの相対link
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options and trade-offs
+      description: 推奨案、代案、Risk、不確実性
+    validations:
+      required: true
+  - type: input
+    id: authority
+    attributes:
+      label: Approver role
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Decision deadline or trigger
+    validations:
+      required: true
+  - type: textarea
+    id: blocked
+    attributes:
+      label: What is blocked
+      description: 判断まで停止する作業と、継続可能な作業
+    validations:
+      required: true

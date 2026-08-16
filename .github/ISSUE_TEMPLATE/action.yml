@@ -1,0 +1,54 @@
+name: Cross-session action
+description: 現在のAIセッションで完了しない独立作業を追跡する
+title: "[Action] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        詳細な調査・判断・結果はIssueへ複製せず、WRK / RES / EXP / DEC / RSKの正本へ置いてください。
+  - type: input
+    id: purpose
+    attributes:
+      label: Purpose
+      description: 完了時に何が変わるか
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Canonical record
+      description: WRK / RES / EXP / DEC / RSKへの相対link
+      placeholder: initiatives/WRK-0001-example.md
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner role
+      description: 個人名より役割を優先する
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Completion criteria
+      description: 検証可能な完了条件
+    validations:
+      required: true
+  - type: input
+    id: review
+    attributes:
+      label: Due or review condition
+    validations:
+      required: true
+  - type: dropdown
+    id: approval
+    attributes:
+      label: Human approval required before execution?
+      options:
+        - "No"
+        - "Yes - approval Decision linked"
+        - "Yes - approval pending"
+    validations:
+      required: true

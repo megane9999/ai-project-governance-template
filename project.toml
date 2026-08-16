@@ -1,0 +1,28 @@
+schema_version = 1
+mode = "template"
+project_name = "<<PROJECT_NAME>>"
+owner_role = "<<PROJECT_OWNER_ROLE>>"
+default_language = "ja"
+repository_classification = "public-template"
+ai_data_ceiling = "public"
+enabled_modules = [
+  "initiatives",
+  "research",
+  "experiments",
+  "decisions",
+  "metrics",
+  "risks",
+  "budget",
+  "archive",
+]
+
+[review]
+cadence = "<<REVIEW_CADENCE>>"
+next_review = "<<YYYY-MM-DD_OR_CONDITION>>"
+
+[authority]
+charter_change = "<<ROLE>>"
+strategy_change = "<<ROLE>>"
+external_action = "<<ROLE>>"
+spending = "<<ROLE>>"
+production_change = "<<ROLE>>"
